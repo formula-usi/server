@@ -1,0 +1,2 @@
+docker build -t formulausi:latest . 
+docker run --gpus all -it --mount type=bind,source=/home/samuele/repos/formula_usi/mynewcar,target=/donkeycar/mynewcar --name formulausi formulausi:latest
