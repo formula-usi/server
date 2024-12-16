@@ -15,6 +15,7 @@ Options:
 from docopt import docopt
 import donkeycar as dk
 from donkeycar.pipeline.training import train
+import tensorflow as tf
 
 
 def main():
@@ -24,6 +25,8 @@ def main():
     model = args['--model']
     model_type = args['--type']
     comment = args['--comment']
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    tf.config.experimental.set_memory_growth(gpus[0], True)
     train(cfg, tubs, model, model_type, comment)
 
 
