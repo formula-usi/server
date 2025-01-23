@@ -1,3 +1,4 @@
 mynewcar/data/*
 .DS_Store
-mynewcar/models/
+mynewcar/models/*
+mynewcar/archive/*
